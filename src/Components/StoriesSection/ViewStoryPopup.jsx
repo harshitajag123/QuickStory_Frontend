@@ -143,29 +143,49 @@ function ViewStoryPopup({ isSmallScreen }) {
 	};
 
 	// Function to handle download
+	// const handleDownloadClick = async (slideId, imageUrl) => {
+	// 	try {
+	// 		// Use Fetch API to download image
+	// 		const response = await fetch(imageUrl);
+	// 		if (!response.ok) throw new Error("Network response was not ok");
+
+	// 		const blob = await response.blob();
+	// 		const url = window.URL.createObjectURL(blob);
+
+	// 		// Create a temporary link to download the image
+	// 		const link = document.createElement("a");
+	// 		link.href = url;
+	// 		link.download = `slide_${slideId}.jpg`;
+	// 		document.body.appendChild(link);
+	// 		link.click();
+	// 		document.body.removeChild(link);
+	// 		window.URL.revokeObjectURL(url);
+
+	// 		// Set the state to mark the slide as downloaded
+	// 		setIsDownloaded((prev) => ({ ...prev, [slideId]: true }));
+	// 	} catch (error) {
+	// 		toast.error("Download failed. Please try again.");
+	// 	}
+	// };
+
+	// Function to handle download
 	const handleDownloadClick = async (slideId, imageUrl) => {
-		try {
-			// Use Fetch API to download image
-			const response = await fetch(imageUrl);
-			if (!response.ok) throw new Error("Network response was not ok");
+		// Use Fetch API to download image
+		const response = await fetch(imageUrl);
+		const blob = await response.blob();
+		const url = window.URL.createObjectURL(blob);
 
-			const blob = await response.blob();
-			const url = window.URL.createObjectURL(blob);
+		// Create a temporary link to download the image
+		const link = document.createElement("a");
+		link.href = url;
+		link.download = `slide_${slideId}.jpg`;
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+		window.URL.revokeObjectURL(url);
 
-			// Create a temporary link to download the image
-			const link = document.createElement("a");
-			link.href = url;
-			link.download = `slide_${slideId}.jpg`;
-			document.body.appendChild(link);
-			link.click();
-			document.body.removeChild(link);
-			window.URL.revokeObjectURL(url);
-
-			// Set the state to mark the slide as downloaded
-			setIsDownloaded((prev) => ({ ...prev, [slideId]: true }));
-		} catch (error) {
-			toast.error("Download failed. Please try again.");
-		}
+		// Set the state to mark the slide as downloaded
+		setIsDownloaded((prev) => ({ ...prev, [slideId]: true }));
 	};
 
 	useEffect(() => {
@@ -337,7 +357,7 @@ function ViewStoryPopup({ isSmallScreen }) {
 									onClick={() =>
 										handleDownloadClick(
 											activeStory?.slides[activeIndx]._id,
-											activeStory?.slides[activeIndx].image // Use the correct property
+											activeStory?.slides[activeIndx].ImageURL
 										)
 									}
 								/>
