@@ -1,0 +1,59 @@
+/* @import "../root.css";
+
+.storyProgContainer{
+  display: flex;
+  width:100%;
+  gap:4px;
+}
+.storyProgItem {
+  flex :1;
+  background-color: gray;
+  border-radius: 10px;
+
+}
+
+
+
+
+}
+ */
+
+ @import "../root.css";
+
+ .storyProgContainer {
+   display: flex;
+   width: 100%;
+   gap: 4px;
+ }
+
+ .storyProgItem {
+   flex: 1;
+   /* background-color: gray; */
+   background-color:grey;
+   border-radius: 10px;
+   overflow: hidden;
+   /* Ensure progress bar is contained within the item */
+ }
+
+ .storyProgBar {
+   height: 4px;
+   width: 0%;
+   background-color: white;
+   border-radius: 10px;
+  transition: width 0.05s linear;
+   /* transition: width 0.3s ease; */
+   /* Smooth transition for progress */
+ }
+
+ /* Highlight for completed slides (100% progress) */
+ .completed {
+   background-color: #87e986;
+ }
+
+ /* Highlight for the active slide (currently progressing) */
+ .active  {
+   background-color: white;
+ }
+
+
+ 

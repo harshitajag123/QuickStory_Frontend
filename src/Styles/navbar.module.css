@@ -1,0 +1,189 @@
+@import '../Styles/root.css';
+
+.mainContainer{
+  margin-top:-3.5rem;
+  position:sticky;
+  top:0;
+  width: 90vw;
+  color: black;
+  background-color: white;
+  z-index:7 ;
+  transition: backdrop-filter 0.5s ease, background-color 0.5s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+}
+
+.scroll{
+  background-color: rgba(0, 0, 0, 0.159);
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 0.8rem;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 0.8rem 0 0;
+    
+}
+
+
+
+.logo{
+  position: relative;
+  display: flex;
+  padding-left:8px;
+  margin-left: -2rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+.logo h2{
+  font-size: 2.3rem;
+  font-weight: 700;
+  font-style: oblique;
+}
+
+.menubox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.guestUsermenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin-right:2rem;
+  gap: 1rem;
+
+}
+
+.btn{
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 10rem;
+  padding: 0.4rem 0.4rem;
+  border-radius: 20px;
+  display: flex;
+  
+  user-select: none;
+}
+
+.btn:hover,.btn:active{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.registerBtn{
+  background-color: var(--button-red);
+
+}
+.loginBtn{
+  background-color: var(--button-blue);
+  
+}
+
+
+.LoggedUserMenu{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+.bookmarksBtn{
+  background-color: var(--button-red);
+}
+.addStoryBtn{
+  background-color: var(--button-red);
+}
+
+.bookmarkIcon{
+  height: 1.2rem;
+  fill: white;
+  stroke: wheat;
+}
+.profileContainer{
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 100%;
+  border: 1px solid black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.profileContainer:hover,.profileContainer:active{
+  transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.profileContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hamburgerIcon{
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.hamburgerIcon:hover,
+.hamburgerIcon:active{
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+/* user menu */
+.userMenu{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  top: 3.5rem;
+  right: 1rem;
+  width: 15em;
+  height: 10rem;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, #0000004d 0px 30px 60px -30px;
+  animation: fadeIn 0.3s ease-in forwards;
+  transform-origin: top right;
+  transform: scale(1);
+  opacity: 1;
+}
+.userMenu p{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: black;
+}
+
+.logoutBtn{
+  height: 2rem;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  background-color: var(--button-red);
+}

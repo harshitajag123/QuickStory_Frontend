@@ -1,0 +1,78 @@
+@import '../../Styles/root.css';
+
+.inputContainer{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  
+}
+
+.label{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 50%;
+
+}
+
+.container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: start;
+  text-align: start;
+  align-items: start;
+}
+
+.inputBox{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+}
+
+.input{
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #353535;
+  font-size: 1rem;
+  width: 100%;
+  font-weight: 700;
+  padding-right: 2rem;
+  outline: none;
+  color:#8E8E8E;
+}
+
+.eyeIcon{
+  position: absolute;
+  top: 50%;
+  right: 0.3rem;
+  transform: translateY(-50%);
+  width: 1.4rem;
+  height: 1.4rem;
+  cursor: pointer;
+}
+
+.errorMsg{
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--error-red);}
+
+@media only screen and (max-width: 700px) {
+
+  /* Styles for medium breakpoint */
+  .errorMsg {
+    font-size: 0.7rem;
+  }
+
+  .inputContainer {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.7rem;
+  }
+}

@@ -1,0 +1,352 @@
+@import '../root.css';
+
+.mainContainer{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.219);
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+}
+
+.outerBox{
+  
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 70%;
+  height: 97%;
+
+}
+
+.backIcon{
+  width: 3rem;
+  height: 3rem;
+  fill: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000b7;
+  border-radius: 100%;
+  cursor: pointer;
+
+}
+
+.internalBox{
+  position: relative;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: black;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  min-height: 45%;
+  width: 40%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px;
+
+}
+
+.storyHeader{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+  background-color: black;
+
+}
+
+.upperBtnBox{
+  position: absolute;
+  top: 4rem;
+  display: flex;
+  width: 100%;
+  margin-top: -1rem;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom,
+      rgb(0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.1) 80%,
+      rgba(0, 0, 0, 0) 100%);
+  z-index: 10;
+
+}
+
+
+
+.closeIcon{
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  fill: white;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+
+}
+
+
+
+.shareIcon{
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke: white;
+  fill: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s linear;
+
+}
+.closeIcon:hover,
+.shareIcon:hover {
+  transform: scale(1.1) rotate(180deg);
+}
+
+.shareIcon:hover {
+  transform: scale(1.1) ;
+}
+
+.bookMarkIcon:hover,
+.likeIcon:hover {
+  transform: scale(1.15);
+}
+
+.imageContainer{
+  position: relative;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0a0a0aa9;
+
+}
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.beforeImage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+
+}
+
+.loading{
+  filter: blur(20px);
+  background-color: rgba(10, 10, 10, 0.661);
+
+}
+
+.afterImage{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+
+}
+
+.storyInfo{
+  position: absolute;
+  bottom: 5rem;
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-align: start;
+  z-index: 9999;
+  padding: 1rem;
+  background: linear-gradient(to bottom,
+      rgba(24, 24, 24, 0.1) 10%,
+      rgba(0, 0, 0, 0.704) 30%,
+      rgba(0, 0, 0, 1) 80%);
+
+}
+.storyInfo h2 {
+  font-size: 1.8rem;
+}
+
+.storyInfo p {
+  font-size: 1rem;
+}
+
+.lowerActionBtns{
+  position: absolute;
+  bottom: 0rem;
+  display: flex;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  background-color: black;
+  /* justify-content: space-between; */
+  justify-content: space-between;
+  z-index: 9999;
+  align-items: center;
+
+}
+
+.bookMarkIcon{
+  width: 1.5rem;
+  height: 1.5rem;
+  /* fill: white; */
+  cursor: pointer;
+  transition: transform 0.2s linear;
+
+}
+
+.activeBookMarkIcon {
+  fill: blue;
+  /* Or any other shade of blue */
+}
+
+
+
+
+.likeBox{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap:3px;
+
+}
+.likeBox span {
+  font-size: 1rem;
+}
+
+.likeIcon{
+  width: 1.5rem;
+  height: 1.5rem;
+  /* fill: white; */
+  cursor: pointer;
+  margin-right: 0.2rem;
+  
+  transition: transform 0.2s linear;
+
+}
+
+.activeLikeIcon{
+  color: red;
+  margin-right: 0.5rem;
+  animation:  1s ease-in-out;
+
+}
+
+.downloadIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  /* fill: white; */
+  cursor: pointer;
+  transition: transform 0.2s linear;
+
+}
+
+.forwardIcon{
+  width: 3rem;
+  height: 3rem;
+  fill: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000cc;
+  border-radius: 100%;
+  cursor: pointer;
+
+}
+
+.forwardIcon:hover, .backIcon:hover{
+  background-color: #000000ee;
+}
+
+@media only screen and (max-width: 700px) {
+  .mainContainer {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    gap: 0;
+  }
+
+  .outerBox {
+    width: 100%;
+    height: 100vh;
+    gap: 0;
+  }
+
+  .internalBox {
+    width: 100vh;
+    border-radius: 0;
+    gap: 0;
+  }
+
+  .backIcon {
+    visibility: hidden;
+    width: 2rem;
+    /* margin-left:-2rem;
+    z-index:2; */
+  }
+
+  .forwardIcon {
+    visibility: hidden;
+    width: 0;
+  }
+
+  .lowerActionBtns {
+    bottom: 2rem;
+  }
+
+  
+
+  .storyInfo {
+    bottom: 7rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1000px) {
+  .mainContainer {
+    gap: 0;
+  }
+
+  .outerBox {
+    gap: 1rem;
+  }
+
+  .internalBox {
+    width: 60%;
+    border-radius: 0;
+    gap: 0;
+  }
+}

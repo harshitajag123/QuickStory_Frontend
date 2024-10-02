@@ -1,0 +1,64 @@
+@import "../root.css";
+
+.mainContainer {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+
+
+.mainContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backdrop-filter: blur(10px);
+}
+
+.mainContainer p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.mainContainer:active,.mainContainer:hover{
+  border: 5px solid var(--border-blue);
+}
+
+.mainContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.564);
+  z-index: 1;
+}
+
+.active{
+  border: 6px solid var(--border-blue);
+}
+
+.loading{
+  filter: blur(20px);
+}
+
+@media screen and (max-width: 700px) {
+  .mainContainer {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .mainContainer p {
+    font-size: 1rem;
+  }
+}
