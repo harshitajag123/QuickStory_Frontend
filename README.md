@@ -1,8 +1,7 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Built a mobile-responsive web platform for creating, exploring, and managing stories across 8+ categories, including Food, Travel, and Movies. 
+2. Utilized Redux for state management, improving data flow efficiency by 30%.
+3. Implemented features like user registration, story bookmarking, and personalized category browsing to boost user engagement.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+live link :    web-story-three.vercel.app/
